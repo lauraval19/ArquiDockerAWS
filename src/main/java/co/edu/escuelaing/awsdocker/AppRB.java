@@ -12,7 +12,7 @@ public class AppRB {
         get("/fachada", (req, res) -> {
             res.type("application/json");
             String cadena = req.queryParams("cad");
-            return httPconnection.mongodb(cadena);
+            return httPconnection.connectdb(cadena);
         });
     }
 
